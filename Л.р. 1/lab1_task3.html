@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document 3</title>
+
+    <style>
+        body {
+            counter-reset: satellites;
+        }
+
+
+        li>ol>li {
+            list-style: none;
+
+            counter-increment: satellites;
+
+            position: relative;
+        }
+
+
+        li>ol>li::before {
+            content: counter(satellites) ". ";
+            position: absolute;
+            left: -2em;
+
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li><a href="./lab1_task1.html">Завдання 1. Текст</a></li>
+        <li><a href="./lab1_task2.html">Завдання 2. Таблиці</a></li>
+        <li><a href="./lab1_task3.html">Завдання 3. Списки</a></li>
+    </ul>
+
+    <hr>
+
+    <b>Супутники деяких планет</b>
+
+    <ul>
+        <li>
+            Земля
+            <ol>
+                <li>Місяць</li>
+            </ol>
+        </li>
+        <li>
+            Марс
+            <ol>
+                <li>Фобос</li>
+                <li>Деймос</li>
+            </ol>
+        </li>
+        <li>
+            Уран
+            <ol>
+                <li>Аріель</li>
+                <li>Умбріель</li>
+                <li>Титания</li>
+                <li>Обертон</li>
+                <li>Міранда</li>
+            </ol>
+        </li>
+        <li>
+            Нептун
+            <ol>
+                <li>Тритон</li>
+                <li>Нереїда</li>
+            </ol>
+        </li>
+    </ul>
+</body>
+
+</html>
