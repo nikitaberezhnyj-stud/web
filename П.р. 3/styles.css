@@ -1,0 +1,111 @@
+body {
+    font-family: "Times New Roman", serif;
+    background-color: #fff;
+    color: #000;
+    margin: 40px;
+}
+
+h1 {
+    text-align: end;
+    color: orange;
+    font-size: 38px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 28px;
+    margin-top: 40px;
+}
+
+#allotment h2 {
+    color: darkorange;
+}
+
+#warehouse h2 {
+    color: blue;
+}
+
+p {
+    text-align: justify;
+    line-height: 1.5;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+em {
+    color: green;
+    background-color: #c7f8d3;
+    font-style: italic;
+    padding: 0 4px;
+}
+
+p::first-letter {
+    color: red;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+ul {
+    list-style-type: disc;
+    margin-left: 30px;
+    font-size: 18px;
+}
+
+ol {
+    margin-left: 40px;
+    font-size: 18px;
+}
+
+#allotment .fruits-list li {
+    color: gray;
+}
+
+#allotment .vegetables-list li {
+    color: red;
+}
+
+#warehouse .fruits-list li {
+    color: green;
+}
+
+#warehouse .vegetables-list li {
+    color: red;
+}
+
+.students-table {
+    width: 400px;
+    border: 1px solid black;
+    border-collapse: collapse;
+    margin-top: 40px;
+    text-align: center;
+    font-size: 18px;
+}
+
+.students-table td {
+    border: 1px solid black;
+    padding: 5px 10px;
+}
+
+.students-table thead td {
+    background-color: #f5f5f5;
+    font-weight: bold;
+}
+
+.students-table tbody td:first-child {
+    font-weight: bold;
+    color: orange;
+}
+
+.students-table tbody td:not(:first-child) {
+    background-color: green;
+    color: white;
+}
+
+.students-table tbody td:not(:first-child):contains("0") {
+    background-color: darkgreen;
+}
+
+.plants-list {
+    margin-top: 20px;
+}
+
