@@ -1,0 +1,314 @@
+:root {
+    --bg-color: #f4f4f4;
+    --text-color: #222;
+    --table-border: #ccc;
+    --hover-bg: #ffd54f;
+    --header-bg: #eee;
+    --header-color: #222;
+    --table-background: #ffffff;
+    --table-background-alt: #eeeeee;
+}
+
+body:has(#theme-switcher:checked) {
+    --bg-color: #222;
+    --text-color: #f4f4f4;
+    --table-border: #444;
+    --hover-bg: #ff9800;
+    --header-bg: #444;
+    --header-color: #fff;
+    --table-background: #2a2a2a;
+    --table-background-alt: #333;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+section {
+    min-height: 100vh;
+    width: 100%;
+}
+
+.header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+h1 {
+    margin: 0;
+}
+
+.theme-label {
+    cursor: pointer;
+    font-size: 18px;
+    user-select: none;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.theme-label {
+    cursor: pointer;
+    font-size: 18px;
+    user-select: none;
+    display: inline-block;
+    padding: 8px 14px;
+    border: 2px solid var(--table-border);
+    background-color: var(--table-background-alt);
+    border-radius: 6px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.filters {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid var(--table-border);
+    border-radius: 5px;
+    background-color: var(--table-background);
+}
+
+.filter-group {
+    margin-bottom: 15px;
+}
+
+.filter-group:last-child {
+    margin-bottom: 0;
+}
+
+.filter-group h3 {
+    margin: 0 0 10px 0;
+    font-size: 16px;
+}
+
+.filter-options {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.filters input[type="radio"] {
+    display: none;
+}
+
+.filters label {
+    cursor: pointer;
+    padding: 6px 12px;
+    border: 2px solid var(--table-border);
+    border-radius: 5px;
+    user-select: none;
+    transition: all 0.3s;
+    display: inline-block;
+}
+
+.filters label:hover {
+    background-color: var(--header-bg);
+}
+
+.filters input[type="radio"]:checked+label {
+    background-color: var(--hover-bg);
+    font-weight: bold;
+    border-color: var(--hover-bg);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th,
+td {
+    padding: 12px;
+    border: 1px solid var(--table-border);
+    text-align: left;
+}
+
+th {
+    background-color: var(--header-bg);
+    color: var(--header-color);
+    font-weight: bold;
+}
+
+tbody tr {
+    display: table-row;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: var(--table-background-alt);
+}
+
+tbody tr:nth-child(even) {
+    background-color: var(--table-background);
+}
+
+tbody tr:hover {
+    background-color: var(--hover-bg);
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+.filters label {
+    transition: background-color 0.22s, border-color 0.22s, color 0.22s;
+}
+
+body:has(#day-all:checked) .filters label[for="day-all"],
+body:has(#day-weekdays:checked) .filters label[for="day-weekdays"],
+body:has(#day-weekends:checked) .filters label[for="day-weekends"],
+
+body:has(#time-all:checked) .filters label[for="time-all"],
+body:has(#time-morning:checked) .filters label[for="time-morning"],
+body:has(#time-afternoon:checked) .filters label[for="time-afternoon"],
+
+body:has(#level-all:checked) .filters label[for="level-all"],
+body:has(#level-1:checked) .filters label[for="level-1"],
+body:has(#level-2:checked) .filters label[for="level-2"],
+body:has(#level-3:checked) .filters label[for="level-3"] {
+    background-color: var(--hover-bg);
+    border-color: var(--hover-bg);
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+#day-all:checked~table tbody tr {
+    display: table-row;
+}
+
+#day-weekdays:checked~table tbody tr.weekday {
+    display: table-row;
+}
+
+#day-weekdays:checked~table tbody tr.weekend {
+    display: none;
+}
+
+#day-weekends:checked~table tbody tr.weekend {
+    display: table-row;
+}
+
+#day-weekends:checked~table tbody tr.weekday {
+    display: none;
+}
+
+
+#time-morning:checked~table tbody tr.afternoon {
+    display: none;
+}
+
+#time-afternoon:checked~table tbody tr.morning {
+    display: none;
+}
+
+
+#level-1:checked~table tbody tr:not(.level1) {
+    display: none;
+}
+
+#level-2:checked~table tbody tr:not(.level2) {
+    display: none;
+}
+
+#level-3:checked~table tbody tr:not(.level3) {
+    display: none;
+}
+
+
+#day-weekdays:checked~table tbody tr.weekend.morning,
+#day-weekdays:checked~table tbody tr.weekend.afternoon,
+#day-weekends:checked~table tbody tr.weekday.morning,
+#day-weekends:checked~table tbody tr.weekday.afternoon {
+    display: none;
+}
+
+.on-center {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+form {
+    padding: 20px;
+    border: 1px solid var(--table-border);
+    border-radius: 5px;
+    background-color: var(--table-background);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 400px;
+    width: 100%;
+}
+
+form h2 {
+    margin: 0 0 10px 0;
+    font-size: 18px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.form-group label {
+    font-weight: bold;
+}
+
+input[type="tel"],
+input[type="email"] {
+    padding: 10px 12px;
+    border: 2px solid var(--table-border);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    border-radius: 5px;
+    font-size: 14px;
+    transition: all 0.3s;
+}
+
+input[type="tel"]:focus,
+input[type="email"]:focus {
+    outline: none;
+    border-color: var(--hover-bg);
+}
+
+input[type="tel"]:valid,
+input[type="email"]:valid {
+    border-color: #4caf50;
+}
+
+input[type="tel"]:not(:placeholder-shown):invalid,
+input[type="email"]:not(:placeholder-shown):invalid {
+    border-color: #f44336;
+}
+
+input[type="submit"] {
+    padding: 12px;
+    display: none;
+    cursor: pointer;
+    background-color: var(--hover-bg);
+    color: var(--text-color);
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+input[type="submit"]:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+}
+
+form:has(input[type="tel"]:valid):has(input[type="email"]:valid) input[type="submit"] {
+    display: block;
+}

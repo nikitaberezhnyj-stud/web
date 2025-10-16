@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Розклад тренерів</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <section>
+        <div class="header">
+            <h1>Розклад тренерів у фітнес-клубі</h1>
+            <input type="checkbox" id="theme-switcher" hidden>
+            <label for="theme-switcher" class="theme-label">Змінити тему 🌓</label>
+        </div>
+
+        <input type="radio" name="day-filter" id="day-all" checked>
+        <input type="radio" name="day-filter" id="day-weekdays">
+        <input type="radio" name="day-filter" id="day-weekends">
+
+        <input type="radio" name="time-filter" id="time-all" checked>
+        <input type="radio" name="time-filter" id="time-morning">
+        <input type="radio" name="time-filter" id="time-afternoon">
+
+        <input type="radio" name="level-filter" id="level-all" checked>
+        <input type="radio" name="level-filter" id="level-1">
+        <input type="radio" name="level-filter" id="level-2">
+        <input type="radio" name="level-filter" id="level-3">
+
+        <div class="filters">
+            <div class="filter-group">
+                <h3>Дні тижня:</h3>
+                <div class="filter-options">
+                    <label for="day-all">Всі дні</label>
+                    <label for="day-weekdays">Будні</label>
+                    <label for="day-weekends">Вихідні</label>
+                </div>
+            </div>
+
+            <div class="filter-group">
+                <h3>Час роботи:</h3>
+                <div class="filter-options">
+                    <label for="time-all">Весь день</label>
+                    <label for="time-morning">Перша половина дня</label>
+                    <label for="time-afternoon">Друга половина дня</label>
+                </div>
+            </div>
+
+            <div class="filter-group">
+                <h3>Категорія тренера:</h3>
+                <div class="filter-options">
+                    <label for="level-all">Всі категорії</label>
+                    <label for="level-1">Категорія 1</label>
+                    <label for="level-2">Категорія 2</label>
+                    <label for="level-3">Категорія 3</label>
+                </div>
+            </div>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Спеціальність</th>
+                    <th>ПІБ</th>
+                    <th>Категорія</th>
+                    <th>Кабінет</th>
+                    <th>Години роботи</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="weekday morning level1">
+                    <td>Фітнес тренер</td>
+                    <td>Іваненко І.І.</td>
+                    <td>1</td>
+                    <td>101</td>
+                    <td>08:00 - 12:00</td>
+                </tr>
+                <tr class="weekday afternoon level2">
+                    <td>Йога інструктор</td>
+                    <td>Петренко П.П.</td>
+                    <td>2</td>
+                    <td>102</td>
+                    <td>13:00 - 17:00</td>
+                </tr>
+                <tr class="weekend morning level3">
+                    <td>Фітнес тренер</td>
+                    <td>Сидоренко С.С.</td>
+                    <td>3</td>
+                    <td>103</td>
+                    <td>09:00 - 13:00</td>
+                </tr>
+                <tr class="weekday morning level2">
+                    <td>Пілатес інструктор</td>
+                    <td>Коваленко К.К.</td>
+                    <td>2</td>
+                    <td>104</td>
+                    <td>08:00 - 12:00</td>
+                </tr>
+                <tr class="weekday afternoon level1">
+                    <td>Кардіо тренер</td>
+                    <td>Мельник М.М.</td>
+                    <td>1</td>
+                    <td>105</td>
+                    <td>13:00 - 17:00</td>
+                </tr>
+                <tr class="weekend afternoon level2">
+                    <td>Фітнес тренер</td>
+                    <td>Бондаренко Б.Б.</td>
+                    <td>2</td>
+                    <td>106</td>
+                    <td>14:00 - 18:00</td>
+                </tr>
+                <tr class="weekday morning level3">
+                    <td>Йога інструктор</td>
+                    <td>Гнатенко Г.Г.</td>
+                    <td>3</td>
+                    <td>107</td>
+                    <td>07:00 - 11:00</td>
+                </tr>
+                <tr class="weekday afternoon level3">
+                    <td>Пілатес інструктор</td>
+                    <td>Левченко Л.Л.</td>
+                    <td>3</td>
+                    <td>108</td>
+                    <td>13:00 - 17:00</td>
+                </tr>
+                <tr class="weekend morning level1">
+                    <td>Кардіо тренер</td>
+                    <td>Шевченко Ш.Ш.</td>
+                    <td>1</td>
+                    <td>109</td>
+                    <td>09:00 - 12:00</td>
+                </tr>
+                <tr class="weekend afternoon level3">
+                    <td>Фітнес тренер</td>
+                    <td>Дмитренко Д.Д.</td>
+                    <td>3</td>
+                    <td>110</td>
+                    <td>14:00 - 18:00</td>
+                </tr>
+                <tr class="weekday morning level1">
+                    <td>Йога інструктор</td>
+                    <td>Кузьменко К.К.</td>
+                    <td>1</td>
+                    <td>111</td>
+                    <td>08:00 - 12:00</td>
+                </tr>
+                <tr class="weekday afternoon level2">
+                    <td>Пілатес інструктор</td>
+                    <td>Олексенко О.О.</td>
+                    <td>2</td>
+                    <td>112</td>
+                    <td>13:00 - 17:00</td>
+                </tr>
+                <tr class="weekend morning level2">
+                    <td>Кардіо тренер</td>
+                    <td>Тимченко Т.Т.</td>
+                    <td>2</td>
+                    <td>113</td>
+                    <td>09:00 - 12:00</td>
+                </tr>
+                <tr class="weekday morning level3">
+                    <td>Фітнес тренер</td>
+                    <td>Савченко С.С.</td>
+                    <td>3</td>
+                    <td>114</td>
+                    <td>08:00 - 12:00</td>
+                </tr>
+                <tr class="weekday afternoon level1">
+                    <td>Йога інструктор</td>
+                    <td>Кириленко К.К.</td>
+                    <td>1</td>
+                    <td>115</td>
+                    <td>13:00 - 17:00</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <br>
+    <hr>
+
+    <section class="on-center">
+        <form>
+            <h2>Форма зворотного зв'язку</h2>
+            <div class="form-group">
+                <label for="tel">Телефон:</label>
+                <input id="tel" type="tel" placeholder="+380123456789" pattern="\+?\d{10,13}" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Електронна пошта:</label>
+                <input id="email" type="email" placeholder="example@email.com" required>
+            </div>
+            <input type="submit" value="Надіслати дані на телефон">
+        </form>
+    </section>
+</body>
+
+</html>
