@@ -1,48 +1,7 @@
-table {
-    border-collapse: collapse;
-    width: 100%;
+td:nth-of-type(2n + 3) {
+    background-color: beige;
 }
 
-td {
-    padding: 5px 10px;
-    border-bottom: 1px solid #ccc;
-}
-
-tr td:nth-child(3),
-tr td:nth-child(5),
-tr td:nth-child(7),
-tr td:nth-child(9) {
-    background-color: #f5f3d3;
-}
-
-tr:nth-child(2) td:nth-child(1),
-tr:nth-child(2) td:nth-child(2),
-tr:nth-child(2) td:nth-child(6),
-tr:nth-child(2) td:nth-child(8),
-tr:nth-child(2) td:nth-child(10),
-
-tr:nth-child(3) td:nth-child(1),
-tr:nth-child(3) td:nth-child(2),
-tr:nth-child(3) td:nth-child(6),
-tr:nth-child(3) td:nth-child(8),
-tr:nth-child(3) td:nth-child(10),
-
-tr:nth-child(4) td:nth-child(1),
-tr:nth-child(4) td:nth-child(2),
-tr:nth-child(4) td:nth-child(6),
-tr:nth-child(4) td:nth-child(8),
-tr:nth-child(4) td:nth-child(10),
-
-tr:nth-child(5) td:nth-child(1),
-tr:nth-child(5) td:nth-child(2),
-tr:nth-child(5) td:nth-child(6),
-tr:nth-child(5) td:nth-child(8),
-tr:nth-child(5) td:nth-child(10),
-
-tr:nth-child(6) td:nth-child(1),
-tr:nth-child(6) td:nth-child(2),
-tr:nth-child(6) td:nth-child(6),
-tr:nth-child(6) td:nth-child(8),
-tr:nth-child(6) td:nth-child(10) {
-    background-color: #dde9f2;
+tr:nth-of-type(2n + 2) {
+    background-color: lightsteelblue;
 }
