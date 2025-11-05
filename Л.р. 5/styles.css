@@ -146,9 +146,12 @@ h1 {
 
 .product-rating {
     direction: rtl;
-    text-align: left;
     unicode-bidi: bidi-override;
-    font-size: 20px;
+    user-select: none;
+    text-align: left;
+    font-size: 24px;
+    line-height: 1;
+    display: inline-block;
 }
 
 .product-rating input {
@@ -156,25 +159,48 @@ h1 {
 }
 
 .product-rating label {
-    color: #ddd;
+    color: transparent;
     cursor: pointer;
-    transition: color 0.2s;
+    display: inline-block;
+    padding: 0 4px;
+    position: relative;
 }
 
-.product-rating label:hover,
-.product-rating label:hover~label {
+.product-rating label::after {
+    content: '\2606';
+    font-size: inherit;
+    color: #ddd;
+    pointer-events: none;
+    transition: color .12s linear, content .08s;
+}
+
+.product-rating input:checked~label::after {
+    content: '\2605';
     color: #FFD700;
 }
 
-.product-rating input:checked~label {
-    color: #FFD700;
+.product-rating:hover input~label::after {
+    content: '\2606';
+    color: #ddd;
 }
+
+.product-rating label:hover::after,
+.product-rating label:hover~label::after {
+    content: '\2605' !important;
+    color: #FFD700 !important;
+}
+
+.product-rating label:focus::after,
+.product-rating label:focus~label::after {
+    content: '\2605' !important;
+    color: #FFD700 !important;
+}
+
 
 .product-price {
     font-weight: bold;
     color: #4CAF50;
     margin: 8px 0;
-
 }
 
 .product-description {
