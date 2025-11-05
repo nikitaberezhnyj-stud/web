@@ -90,15 +90,19 @@ h1 {
     background: #f0f0f0;
     overflow: hidden;
     text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .product-image img {
+    width: 100%;
     height: 100%;
-    width: auto;
-    vertical-align: middle;
-    object-fit: cover;
+    object-fit: contain;
+    object-position: center;
     transition: 0.4s;
 }
+
 
 .card-inner:hover .product-image img {
     transform: scale(1.1);
