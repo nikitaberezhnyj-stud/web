@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Columns Layout</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .wrapper {
+            display: flex;
+            flex-flow: column wrap;
+            min-height: 100vh;
+            max-height: 100vh;
+        }
+
+        .wrapper>* {
+            margin: 10px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+        }
+
+        .wrapper header {
+            flex: 0 0 auto;
+            background-color: lightgray;
+            color: black;
+            width: 150px;
+            height: calc(100vh - 20px);
+            writing-mode: vertical-lr;
+            text-orientation: mixed;
+        }
+
+        .wrapper aside {
+            background-color: lightgray;
+            color: black;
+            flex: 1 1 auto;
+            max-height: calc(33.33% - 20px);
+        }
+
+        .wrapper main {
+            background-color: lightgray;
+            color: black;
+            flex: 2 1 auto;
+            max-height: calc(33.33% - 20px);
+        }
+
+        .wrapper section {
+            background-color: lightgray;
+            color: black;
+            flex: 1 1 auto;
+            max-height: calc(33.33% - 20px);
+        }
+
+        .wrapper footer {
+            flex: 0 0 auto;
+            background-color: lightgray;
+            color: black;
+            width: 150px;
+            height: calc(100vh - 20px);
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+        }
+
+        h1,
+        h2 {
+            margin-top: 0;
+        }
+
+        header h1 {
+            font-size: 1.2em;
+        }
+
+        footer h2 {
+            font-size: 1.2em;
+        }
+
+        .content-block {
+            margin-bottom: 15px;
+            line-height: 1.6;
+            overflow-y: auto;
+        }
+
+        header p,
+        footer p {
+            font-size: 0.9em;
+            line-height: 1.4;
+        }
+
+        aside,
+        main,
+        section {
+            overflow-y: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <h1>Шапка</h1>
+            <p>Вертикальний заголовок зліва</p>
+        </header>
+
+        <aside>
+            <h2>Перша колонка</h2>
+            <div class="content-block">
+                <p>Це перша бічна панель, яка часто використовується для навігації або додаткової інформації. У цьому
+                    макеті колонки розташовані вертикально.</p>
+                <p>Flexbox з column wrap дозволяє створювати вертикальні макети, де елементи можуть переноситися в
+                    наступну колонку.</p>
+            </div>
+        </aside>
+
+        <main>
+            <h2>Основний контент</h2>
+            <div class="content-block">
+                <p>Це головна область контенту сторінки. Саме тут розміщується основна інформація, стаття, пости блогу
+                    або інший важливий вміст.</p>
+                <p>У цьому макеті використовується flex-flow: column wrap, що дозволяє елементам розташовуватися
+                    вертикально, але з можливістю переносу в наступну колонку, якщо не вистачає місця по висоті.</p>
+                <p>Заголовок та підвал тепер виступають як вузькі вертикальні панелі з боків сторінки, створюючи
+                    унікальний та цікавий макет.</p>
+                <p>Давно відомо, що при роботі з макетом читабельний текст заважає зосередитися на елементах макета.
+                    Тому використовується достатня кількість тексту для демонстрації.</p>
+            </div>
+        </main>
+
+        <section>
+            <h2>Третя колонка</h2>
+            <div class="content-block">
+                <p>Це третя колонка макету, яка зазвичай використовується для додаткової інформації, реклами або
+                    пов'язаних посилань.</p>
+                <p>Вертикальний макет з Flexbox відкриває нові можливості для креативного дизайну веб-сторінок.</p>
+                <p>Всі колонки мають можливість прокрутки, якщо контент перевищує доступний простір.</p>
+            </div>
+        </section>
+
+        <footer>
+            <h2>Підвал</h2>
+            <p>Вертикальний підвал праворуч</p>
+        </footer>
+    </div>
+</body>
+
+</html>
