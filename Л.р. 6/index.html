@@ -10,153 +10,157 @@
 
 <body>
     <h1>Галерея рецептів</h1>
-
     <div class="gallery-wrapper">
         <div class="gallery-container">
             <input type="radio" name="slider" id="slide1" checked>
             <input type="radio" name="slider" id="slide2">
+            <input type="radio" name="slider" id="slide3">
+            <input type="radio" name="slider" id="slide4">
+            <input type="radio" name="slider" id="slide5">
 
-            <label for="slide1" class="nav-arrow prev">‹</label>
-            <label for="slide2" class="nav-arrow next">›</label>
+            <label for="slide1" class="nav-arrow prev" id="prev1">‹</label>
+            <label for="slide2" class="nav-arrow prev" id="prev2">‹</label>
+            <label for="slide3" class="nav-arrow prev" id="prev3">‹</label>
+            <label for="slide4" class="nav-arrow prev" id="prev4">‹</label>
+            <label for="slide5" class="nav-arrow prev" id="prev5">‹</label>
+
+            <label for="slide2" class="nav-arrow next" id="next1">›</label>
+            <label for="slide3" class="nav-arrow next" id="next2">›</label>
+            <label for="slide4" class="nav-arrow next" id="next3">›</label>
+            <label for="slide5" class="nav-arrow next" id="next4">›</label>
 
             <div class="slides">
-                <div class="slide">
-                    <div class="gallery">
-                        <div class="gallery-item">
-                            <a href="#modal1">
-                                <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=400"
-                                    alt="Торт з кремом">
-                            </a>
-                            <div class="recipe-card">
-                                <h3>Торт з кремом</h3>
-                                <p><strong>Інгредієнти:</strong></p>
-                                <p>Борошно - 200г, цукор - 150г, яйця - 3шт, масло - 100г, молоко - 150мл, вершки -
-                                    300мл</p>
-                                <p><strong>Приготування:</strong></p>
-                                <p>Збити яйця з цукром. Додати борошно та молоко. Випікати 30 хв при 180°C. Взбити
-                                    вершки і покрити торт.</p>
-                            </div>
-                        </div>
-
-                        <div class="gallery-item">
-                            <a href="#modal2">
-                                <img src="https://images.unsplash.com/photo-1586985289688-ca3cf47d3e6e?w=400"
-                                    alt="Горіхово-морквяний кекс">
-                            </a>
-                            <div class="recipe-card">
-                                <h3>Горіхово-морквяний кекс</h3>
-                                <p><strong>Інгредієнти:</strong></p>
-                                <p>200г цукру, 160мл олії, 60г йогурту, 3 яйця, 250г борошна, 1ч.л. розпушувача, 2ч.л.
-                                    кориці, 1ч.л. мускатного, 0.5ч.л. солі, 260г моркви, 100г горіхів пекан</p>
-                                <p><strong>Приготування:</strong></p>
-                                <p>Змішати масло з цукром. Додати йогурт і яйця. Перемішати сухі інгредієнти. Додати
-                                    моркву і горіхи. Випікати при 170° 30-40 хв.</p>
-                            </div>
-                        </div>
-
-                        <div class="gallery-item">
-                            <a href="#modal3">
-                                <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=400"
-                                    alt="Торт з полуницею">
-                            </a>
-                            <div class="recipe-card">
-                                <h3>Торт з полуницею</h3>
-                                <p><strong>Інгредієнти:</strong></p>
-                                <p>Бісквіт - 3 коржі, вершки - 400мл, полуниця - 500г, цукор - 100г, желатин - 10г</p>
-                                <p><strong>Приготування:</strong></p>
-                                <p>Збити вершки. Розрізати полуницю. Зібрати торт, чергуючи коржі, вершки та полуницю.
-                                    Охолодити 3 години.</p>
-                            </div>
-                        </div>
-
-                        <div class="gallery-item">
-                            <a href="#modal4">
-                                <img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?w=400"
-                                    alt="Шоколадний мус">
-                            </a>
-                            <div class="recipe-card">
-                                <h3>Шоколадний мус-торт</h3>
-                                <p><strong>Інгредієнти:</strong></p>
-                                <p>Шоколад - 300г, вершки - 400мл, яйця - 4шт, цукор - 80г, печиво - 200г, масло - 100г
-                                </p>
-                                <p><strong>Приготування:</strong></p>
-                                <p>Подрібнити печиво з маслом для основи. Розтопити шоколад. Збити вершки. Змішати і
-                                    викласти на основу. Охолодити 4 години.</p>
-                            </div>
+                <div class="gallery-item">
+                    <div class="image-wrapper">
+                        <a href="#modal1">
+                            <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=400"
+                                alt="Торт з кремом">
+                        </a>
+                        <div class="recipe-card">
+                            <h3>Торт з кремом</h3>
+                            <p><strong>Інгредієнти:</strong></p>
+                            <p>Борошно - 200г, цукор - 150г, яйця - 3шт, масло - 100г, молоко - 150мл, вершки - 300мл
+                            </p>
+                            <p><strong>Приготування:</strong></p>
+                            <p>Збити яйця з цукром. Додати борошно та молоко. Випікати 30 хв при 180°C. Взбити вершки і
+                                покрити торт.</p>
                         </div>
                     </div>
                 </div>
-
-                <div class="slide">
-                    <div class="gallery">
-                        <div class="gallery-item">
-                            <a href="#modal5">
-                                <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?w=400"
-                                    alt="Чізкейк">
-                            </a>
-                            <div class="recipe-card">
-                                <h3>Чізкейк класичний</h3>
-                                <p><strong>Інгредієнти:</strong></p>
-                                <p>Сир маскарпоне - 500г, яйця - 3шт, цукор - 150г, печиво - 200г, масло - 80г</p>
-                                <p><strong>Приготування:</strong></p>
-                                <p>Змішати печиво з маслом. Збити сир з яйцями і цукром. Викласти на основу. Випікати 45
-                                    хв при 160°C.</p>
-                            </div>
-                        </div>
-
-                        <div class="gallery-item">
-                            <a href="#modal6">
-                                <img src="https://images.unsplash.com/photo-1622576890453-8e50b6f7d5b0?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D?w=400"
-                                    alt="Веселковий торт">
-                            </a>
-                            <div class="recipe-card">
-                                <h3>Веселковий торт</h3>
-                                <p><strong>Інгредієнти:</strong></p>
-                                <p>Борошно - 300г, цукор - 250г, яйця - 5шт, масло - 150г, харчові барвники, вершковий
-                                    крем - 500г</p>
-                                <p><strong>Приготування:</strong></p>
-                                <p>Розділити тісто на 5 частин, додати барвники. Випікати коржі окремо. Зібрати торт з
-                                    кремом.</p>
-                            </div>
-                        </div>
-
-                        <div class="gallery-item">
-                            <a href="#modal7">
-                                <img src="https://images.unsplash.com/photo-1621303837174-89787a7d4729?w=400"
-                                    alt="Маковий рулет">
-                            </a>
-                            <div class="recipe-card">
-                                <h3>Маковий рулет</h3>
-                                <p><strong>Інгредієнти:</strong></p>
-                                <p>Яйця - 4шт, цукор - 120г, борошно - 100г, мак - 200г, молоко - 100мл, мед - 50г</p>
-                                <p><strong>Приготування:</strong></p>
-                                <p>Збити яйця з цукром. Додати борошно. Випікати 10 хв. Змішати мак з медом. Згорнути
-                                    рулет з начинкою.</p>
-                            </div>
-                        </div>
-
-                        <div class="gallery-item">
-                            <a href="#modal8">
-                                <img src="https://images.unsplash.com/photo-1681329142517-6daaa56d3670?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D?w=400"
-                                    alt="Лимонний пиріг">
-                            </a>
-                            <div class="recipe-card">
-                                <h3>Лимонний пиріг</h3>
-                                <p><strong>Інгредієнти:</strong></p>
-                                <p>Борошно - 250г, масло - 120г, цукор - 100г, лимони - 3шт, яйця - 4шт, цукрова пудра -
-                                    50г</p>
-                                <p><strong>Приготування:</strong></p>
-                                <p>Замісити тісто для основи. Випікати 15 хв. Змішати лимонний сік, цедру, яйця і цукор.
-                                    Викласти на основу. Випікати ще 25 хв.</p>
-                            </div>
+                <div class="gallery-item">
+                    <div class="image-wrapper">
+                        <a href="#modal2">
+                            <img src="https://images.unsplash.com/photo-1586985289688-ca3cf47d3e6e?w=400"
+                                alt="Горіхово-морквяний кекс">
+                        </a>
+                        <div class="recipe-card">
+                            <h3>Горіхово-морквяний кекс</h3>
+                            <p><strong>Інгредієнти:</strong></p>
+                            <p>200г цукру, 160мл олії, 60г йогурту, 3 яйця, 250г борошна, 1ч.л. розпушувача, 2ч.л.
+                                кориці, 1ч.л. мускатного, 0.5ч.л. солі, 260г моркви, 100г горіхів пекан</p>
+                            <p><strong>Приготування:</strong></p>
+                            <p>Змішати масло з цукром. Додати йогурт і яйця. Перемішати сухі інгредієнти. Додати моркву
+                                і горіхи. Випікати при 170° 30-40 хв.</p>
                         </div>
                     </div>
                 </div>
-            </div>
-
-            <div class="radio-indicators">
-                <label for="slide1"></label>
-                <label for="slide2"></label>
+                <div class="gallery-item">
+                    <div class="image-wrapper">
+                        <a href="#modal3">
+                            <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=400"
+                                alt="Торт з полуницею">
+                        </a>
+                        <div class="recipe-card">
+                            <h3>Торт з полуницею</h3>
+                            <p><strong>Інгредієнти:</strong></p>
+                            <p>Бісквіт - 3 коржі, вершки - 400мл, полуниця - 500г, цукор - 100г, желатин - 10г</p>
+                            <p><strong>Приготування:</strong></p>
+                            <p>Збити вершки. Розрізати полуницю. Зібрати торт, чергуючи коржі, вершки та полуницю.
+                                Охолодити 3 години.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="image-wrapper">
+                        <a href="#modal4">
+                            <img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?w=400"
+                                alt="Шоколадний мус">
+                        </a>
+                        <div class="recipe-card">
+                            <h3>Шоколадний мус-торт</h3>
+                            <p><strong>Інгредієнти:</strong></p>
+                            <p>Шоколад - 300г, вершки - 400мл, яйця - 4шт, цукор - 80г, печиво - 200г, масло - 100г</p>
+                            <p><strong>Приготування:</strong></p>
+                            <p>Подрібнити печиво з маслом для основи. Розтопити шоколад. Збити вершки. Змішати і
+                                викласти на основу. Охолодити 4 години.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="image-wrapper">
+                        <a href="#modal5">
+                            <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?w=400" alt="Чізкейк">
+                        </a>
+                        <div class="recipe-card">
+                            <h3>Чізкейк класичний</h3>
+                            <p><strong>Інгредієнти:</strong></p>
+                            <p>Сир маскарпоне - 500г, яйця - 3шт, цукор - 150г, печиво - 200г, масло - 80г</p>
+                            <p><strong>Приготування:</strong></p>
+                            <p>Змішати печиво з маслом. Збити сир з яйцями і цукром. Викласти на основу. Випікати 45 хв
+                                при 160°C.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="image-wrapper">
+                        <a href="#modal6">
+                            <img src="https://images.unsplash.com/photo-1622576890453-8e50b6f7d5b0?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D?w=400"
+                                alt="Веселковий торт">
+                        </a>
+                        <div class="recipe-card">
+                            <h3>Веселковий торт</h3>
+                            <p><strong>Інгредієнти:</strong></p>
+                            <p>Борошно - 300г, цукор - 250г, яйця - 5шт, масло - 150г, харчові барвники, вершковий крем
+                                - 500г</p>
+                            <p><strong>Приготування:</strong></p>
+                            <p>Розділити тісто на 5 частин, додати барвники. Випікати коржі окремо. Зібрати торт з
+                                кремом.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="image-wrapper">
+                        <a href="#modal7">
+                            <img src="https://images.unsplash.com/photo-1621303837174-89787a7d4729?w=400"
+                                alt="Маковий рулет">
+                        </a>
+                        <div class="recipe-card">
+                            <h3>Маковий рулет</h3>
+                            <p><strong>Інгредієнти:</strong></p>
+                            <p>Яйця - 4шт, цукор - 120г, борошно - 100г, мак - 200г, молоко - 100мл, мед - 50г</p>
+                            <p><strong>Приготування:</strong></p>
+                            <p>Збити яйця з цукром. Додати борошно. Випікати 10 хв. Змішати мак з медом. Згорнути рулет
+                                з начинкою.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="image-wrapper">
+                        <a href="#modal8">
+                            <img src="https://images.unsplash.com/photo-1681329142517-6daaa56d3670?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D?w=400"
+                                alt="Лимонний пиріг">
+                        </a>
+                        <div class="recipe-card">
+                            <h3>Лимонний пиріг</h3>
+                            <p><strong>Інгредієнти:</strong></p>
+                            <p>Борошно - 250г, масло - 120г, цукор - 100г, лимони - 3шт, яйця - 4шт, цукрова пудра - 50г
+                            </p>
+                            <p><strong>Приготування:</strong></p>
+                            <p>Замісити тісто для основи. Випікати 15 хв. Змішати лимонний сік, цедру, яйця і цукор.
+                                Викласти на основу. Випікати ще 25 хв.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

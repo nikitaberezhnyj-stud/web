@@ -30,49 +30,36 @@ input[type="radio"] {
 .gallery-container {
     position: relative;
     width: 100%;
-    overflow-x: hidden;
-    overflow-y: visible;
+    overflow: hidden;
     height: 700px;
 }
 
 .slides {
     position: relative;
-    width: 200%;
+    width: 800%;
     transition: margin-left 0.5s ease-in-out;
 }
 
-.slide {
-    float: left;
-    width: 50%;
-    box-sizing: border-box;
-    padding: 0 10px;
-}
-
-.gallery {
-    display: block;
-    width: 100%;
-    font-size: 0;
-}
-
 .gallery-item {
-    display: inline-block;
-    vertical-align: top;
-    width: 24%;
-    margin: 0.5%;
+    float: left;
+    width: 3.125%;
+    padding: 0 10px;
     box-sizing: border-box;
     position: relative;
     height: 250px;
     font-size: 14px;
+}
+
+.image-wrapper {
+    width: 100%;
+    height: 100%;
+    position: relative;
     border-radius: 8px;
     transition: all 0.3s ease;
 }
 
-.image-container {
-    width: 100%;
-    height: 100%;
-    position: relative;
-    overflow: hidden;
-    border-radius: 8px;
+.image-wrapper:hover {
+    transform: scale(1.05);
 }
 
 .gallery-item img {
@@ -84,16 +71,9 @@ input[type="radio"] {
     border-radius: 8px;
 }
 
-.gallery-item:hover {
-    transform: scale(1.05);
-}
-
-
 .recipe-card {
     position: absolute;
-
     top: 85%;
-
     left: 0;
     right: 0;
     background: #fff;
@@ -108,7 +88,7 @@ input[type="radio"] {
     min-width: 250px;
 }
 
-.gallery-item:hover .recipe-card {
+.image-wrapper:hover .recipe-card {
     opacity: 1;
     visibility: visible;
     transform: translateY(10px);
@@ -182,6 +162,8 @@ input[type="radio"] {
     text-decoration: none;
     border-radius: 50%;
     z-index: 10;
+    cursor: pointer;
+    display: none;
 }
 
 .nav-arrow.prev {
@@ -192,30 +174,46 @@ input[type="radio"] {
     right: 0;
 }
 
+#slide1:checked~label[for="slide2"].next {
+    display: block;
+}
+
+#slide2:checked~label[for="slide1"].prev,
+#slide2:checked~label[for="slide3"].next {
+    display: block;
+}
+
+#slide3:checked~label[for="slide2"].prev,
+#slide3:checked~label[for="slide4"].next {
+    display: block;
+}
+
+#slide4:checked~label[for="slide3"].prev,
+#slide4:checked~label[for="slide5"].next {
+    display: block;
+}
+
+#slide5:checked~label[for="slide4"].prev {
+    display: block;
+}
+
+
 #slide1:checked~.slides {
     margin-left: 0;
 }
 
 #slide2:checked~.slides {
+    margin-left: -25%;
+}
+
+#slide3:checked~.slides {
+    margin-left: -50%;
+}
+
+#slide4:checked~.slides {
+    margin-left: -75%;
+}
+
+#slide5:checked~.slides {
     margin-left: -100%;
-}
-
-.radio-indicators {
-    text-align: center;
-    margin-top: 20px;
-}
-
-.radio-indicators label {
-    display: inline-block;
-    width: 12px;
-    height: 12px;
-    background: #ccc;
-    border-radius: 50%;
-    margin: 0 5px;
-    cursor: pointer;
-}
-
-#slide1:checked~.radio-indicators label[for="slide1"],
-#slide2:checked~.radio-indicators label[for="slide2"] {
-    background: #333;
 }
